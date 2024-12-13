@@ -1,0 +1,220 @@
+/* NavBar.css */
+.navbar {
+  background-color: #333;
+  color: white;
+  height: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.telegram-verified {
+  background-color: #0088cc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.telegram-login-button {
+  margin-right: 10px;
+}
+
+.telegram-error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.telegram-updating {
+  color: #0088cc;
+  font-size: 0.9em;
+  margin-right: 10px;
+}
+
+.navbar-left {
+  left: 0;
+  position: absolute;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.navbar-right {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  
+  /* margin-left: 1rem; */
+}
+
+.teams-button {
+  /* background-color: #555; */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.language-picker-container {
+  display: flex;
+  align-items: center;
+
+  /* margin-left: 1rem; */
+}
+
+
+.language-picker {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  /* padding: 0.3rem 0.5rem; */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.language-picker::-ms-expand {
+  display: none;
+}
+
+.language-picker option {
+  background-color: #333;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.welcome-message {
+  margin-right: 0.5rem;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.logout-button,
+.login-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover,
+.login-button:hover {
+  background-color: #777;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem 0rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .language-picker-container {
+    margin-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+
+  .teams-button {
+    margin: 0.5rem 0;
+  }
+
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .welcome-message {
+    /* margin-right: 0;
+    margin-bottom: 0.25rem; */
+    display: none;
+  }
+
+  .user-name {
+    font-size: 1.1em;
+  }
+
+  .logout-button,
+  .login-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

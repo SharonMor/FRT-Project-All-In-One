@@ -1,0 +1,112 @@
+.not-found-page {
+    min-height: 100vh;
+    background-color: #f4f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .not-found-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 32rem;
+    width: 100%;
+  }
+  
+  .alert-icon {
+    color: #e53e3e;
+    margin: 0 auto 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1rem;
+  }
+  
+  .main-message {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-box {
+    background-color: #e6f6ff;
+    border-left: 4px solid #3182ce;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .info-box p {
+    color: #2c5282;
+    margin: 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .home-button,
+  .contact-button {
+    background-color: #4299e1;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover,
+  .contact-button:hover {
+    background-color: #3182ce;
+  }
+  
+  .home-button svg,
+  .contact-button svg {
+    margin-right: 0.5rem;
+  }
+  
+  .footer-message {
+    margin-top: 2rem;
+    color: #718096;
+    max-width: 32rem;
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 640px) {
+    .not-found-container {
+      padding: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 1.75rem;
+    }
+  
+    .main-message {
+      font-size: 1.125rem;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .home-button,
+    .contact-button {
+      width: 100%;
+    }
+  }

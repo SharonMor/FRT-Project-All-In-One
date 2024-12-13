@@ -1,0 +1,22 @@
+.google-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #003d82;
+    color: #757575;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .google-login-button:hover {
+    background-color: #f5f5f5;
+    color: black;
+    border: black;
+    border-style: solid;
+  }
+  

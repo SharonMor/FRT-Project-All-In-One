@@ -1,0 +1,17 @@
+.marker-description {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    position: absolute;
+    bottom: 100%; /* Position it above the icon */
+    left: 50%;
+    transform: translate(-50%, -5px); /* Center horizontally and add a bit of offset */
+    white-space: nowrap;
+    margin-bottom: 8px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }

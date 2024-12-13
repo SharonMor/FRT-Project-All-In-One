@@ -1,0 +1,52 @@
+.monkey-watcher {
+    height: 8rem;
+    /* width: 40%; */
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 1536px) {
+    .monkey-watcher {
+      /* width: 20%; */
+    }
+  }
+  
+  .monkey-background {
+    width: 100%;
+    opacity: 0.5;
+    border-top-right-radius: 0.75rem;
+  }
+  
+  .monkey-avatar {
+    display: none;
+    position: absolute;
+    height: 11rem;
+    padding: 0 2rem;
+    margin: 0 1.75rem;
+    left: 350px;
+  }
+  
+  .monkey-eye {
+    display: none;
+    position: absolute;
+    border-radius: 9999px;
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+  
+  .left-eye {
+    left: 500px;
+    top: 465px;
+  }
+  
+  .right-eye {
+    left: 523px;
+    top: 465px;
+  }
+  
+  @media (min-width: 1024px) {
+    .monkey-avatar,
+    .monkey-eye {
+      display: block;
+    }
+  }

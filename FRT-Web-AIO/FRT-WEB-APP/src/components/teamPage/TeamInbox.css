@@ -1,0 +1,8 @@
+/* src/components/teamPage/TeamInbox.css */
+.team-inbox .event {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

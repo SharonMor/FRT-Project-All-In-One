@@ -1,0 +1,338 @@
+.teams-page {
+  max-height: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.loader,
+.error-message,
+.no-teams-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.selected-team-container {
+  height: 100%;
+}
+
+.teams-list-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.teams-page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.teams-actions {
+  display: flex;
+  align-items: end;
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+
+  /* align-items: center; */
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.refresh-button:hover {
+  transform: rotate(180deg);
+}
+
+.create-team-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-team-button:hover {
+  background-color: #1976d2;
+}
+
+.teams-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.team-item {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.team-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.team-item h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-members-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.teams-page .error-message {
+  background-color: #fff3e0;
+  border: 1px solid #ffe0b2;
+  color: #e65100;
+  padding: 1.5rem;
+  margin: auto;
+  border-radius: 8px;
+  max-width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leave-team-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-item:hover .leave-team-button {
+  opacity: 1;
+}
+.leave-team-button:hover {
+  background-color: rgba(229, 57, 53, 0.1);
+  border-color: #e53935;
+}
+
+.leave-team-button svg {
+  color: #e53935;
+  transition: transform 0.3s ease;
+}
+.leave-team-button:hover svg {
+  transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.modal-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button.cancel {
+  background-color: #e0e0e0;
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.modal-button.cancel:hover {
+  background-color: #d0d0d0;
+}
+
+.modal-button.confirm {
+  background-color: #e53935;
+  color: white;
+}
+
+.modal-button.confirm:hover {
+  background-color: #c62828;
+}
+
+.export-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.export-button:hover {
+  transform: rotate(180deg);
+}
+
+.export-modal {
+  width: 80%;
+  min-height: 450px;
+  max-height: 600px !important;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-search-input {
+  /* width: 80%; */
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.team-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  cursor: pointer;
+}
+.team-card .team-name{
+  min-height: 85px;
+}
+
+.team-card.selected {
+  background-color: #e0e0e0;
+}
+
+.date-picker-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.date-picker {
+  display: flex;
+  flex-direction: column;
+}
+
+.export-data-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.teams-page-header-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.export-data-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.export-data-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .teams-page {
+    padding: 1.5rem;
+  }
+
+  .create-team-button {
+    width: 100%;
+  }
+
+  .teams-list {
+    grid-template-columns: 1fr;
+  }
+
+  .teams-page .error-message {
+    max-width: 90%;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-picker-container {
+    flex-direction: column;
+  }
+  .teams-page-header-section{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .teams-page {
+    padding: 1rem;
+  }
+
+  .teams-page .error-message {
+    max-width: 95%;
+  }
+}

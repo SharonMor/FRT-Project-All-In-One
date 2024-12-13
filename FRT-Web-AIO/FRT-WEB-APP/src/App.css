@@ -1,0 +1,36 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-container {
+  flex: 1;
+  overflow: hidden;
+}
+.navbar {
+  height: 50px; /* or whatever height you prefer */
+  /* other navbar styles */
+}
+/* Add this new rule for the content inside each route */
+.page-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .page-container {
+    height: calc(100vh - 50px); /* Adjust based on your navbar height */
+  }
+}
