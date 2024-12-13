@@ -1,0 +1,17 @@
+{
+  "app": {
+    "log_level": "info",
+    "host": "0.0.0.0",
+    "port": 8095
+  },
+  "logger": {
+    "logs_folder_path": "logger\\logs\\"
+  },
+  "api_auth_keys": [
+    "badihi",
+    "teams123"
+  ],
+  "mongo_db": {
+    "uri": "mongodb+srv://sharonmor5869:TQHT3QlLcOtY2DaB@frt-cluster.j4safol.mongodb.net/?retryWrites=true&w=majority&appName=FRT-Cluster"
+  }
+}

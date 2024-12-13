@@ -1,0 +1,30 @@
+{
+  "database" : {
+    "auth_key" : "teams123",
+    "base_url" : "http://localhost:8095/api/v1"
+  },
+  "app": {
+    "log_level" : "info",
+    "host": "0.0.0.0",
+    "port": 8000
+  },
+  "logger": {
+    "logs_folder_path": "logger\\logs\\"
+  },
+  "api_auth_keys": [
+    "badihi"
+  ],
+    "kafka": {
+    "bootstrap_servers": "kafka-25e5b167-sharonmor5869-ab1b.l.aivencloud.com:24803",
+    "security_protocol": "SSL",
+    "ssl_cafile": "config/ca.pem",
+    "ssl_certfile": "config/service.cert",
+    "ssl_keyfile": "config/service.key",
+    "producer": {
+      "value_serializer": "json"
+    },
+    "topics": {
+      "messanger_topic": "message_stream_topic"
+    }
+  }
+}

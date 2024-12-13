@@ -1,0 +1,52 @@
+{
+  "bot_api_key": "7250861439:AAEQ4f0BVywPaGdDNv_h_ecwrfxoi6ryRpQ",
+  "database": {
+    "auth_key": "teams123",
+    "base_url": "http://localhost:8095/api/v1"
+  },
+  "teams_service": {
+    "auth_key": "badihi",
+    "base_url": "http://localhost:8000/api/v1"
+  },
+  "users_service": {
+    "auth_key": "badihi",
+    "base_url": "http://localhost:3001/api/v1"
+  },
+  "messenger_service": {
+    "auth_key": "badihi",
+    "base_url": "http://localhost:8097/api/v1"
+  },
+  "app": {
+    "log_level": "info",
+    "host": "0.0.0.0",
+    "port": 8019
+  },
+  "logger": {
+    "logs_folder_path": "logger\\logs\\"
+  },
+  "api_auth_keys": [
+    "badihi"
+  ],
+  "kafka": {
+    "bootstrap_servers": "kafka-25e5b167-sharonmor5869-ab1b.l.aivencloud.com:24803",
+    "security_protocol": "SSL",
+    "ssl_cafile": "config/ca.pem",
+    "ssl_certfile": "config/service.cert",
+    "ssl_keyfile": "config/service.key",
+    "producer": {
+      "value_serializer": "json",
+      "send_message_timeout": 30,
+      "producer_messanger_topic": "create_a_response_topic",
+      "send_text_message_topic": "message_stream_topic",
+      "map_topic": "map_topic"
+    },
+    "consumer": {
+      "topic_messenger": "message_stream_topic",
+      "topic_map": "map_topic",
+      "topic_mission": "mission_topic",
+      "group_id": "your_test_1222313-sharon",
+      "auto_offset_reset": "latest",
+      "value_deserializer": "json"
+    }
+  }
+}
